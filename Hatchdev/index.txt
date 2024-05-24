@@ -1,0 +1,356 @@
+// Human Definition
+
+/* class Human{
+    hasHands: boolean;
+    hasHead: boolean;
+    hasLegs: boolean;
+    hasBrain: boolean;
+    canReason: boolean;
+}
+
+class Art {
+    colours: Array<String>
+}
+
+const monalisa = new Art();
+monalisa.colours = ["red", "blue", "green"];
+console.log(monalisa)
+
+class Vehicle{
+    canTransport: boolean;
+
+    move(){
+        console.log('Vehicle is moving')
+    }
+}
+
+let Motorola = new Vehicle();
+Motorola.canTransport = false;
+
+console.log(Motorola)
+
+class plane extends Vehicle{
+    name: string;
+    hasFeul: boolean;
+    model: string;
+    productionDate: Date;
+    move(): void{
+        console.log("Otilo");
+    }
+}
+
+const Beoling = new plane();
+Beoling.name = "Beoling 707";
+Beoling.productionDate = new Date("2020-12-27");
+Beoling.model = "707";
+Beoling.hasFeul = true;
+Beoling.canTransport = true;
+Beoling.move()
+
+console.log(Beoling)
+
+
+class maths {
+    calc(num1: number, num2: number): void{
+        console.log( num1 + num2 )
+    }
+}
+
+let add = new maths;
+add.calc(2,3);
+
+console.log(add)
+
+
+class Registration{
+    name: string[];
+    password: number;
+    date: Date
+    isNotTeen: boolean;
+    hasMoney: boolean;
+    cars: string[];
+}
+
+const Peter = new Registration();
+Peter.cars = ["Benz", "Toyota", "Lexus"]
+Peter.date = new Date("2023-10-12")
+Peter.hasMoney = true
+Peter.isNotTeen = true
+Peter.name = ["Fagoroye", "Peter", "Ademide"]
+Peter.password = 1234567890
+
+console.log(Peter)
+ */
+
+/* 
+function add(num1: number, num2: number): number{
+    return num1 + num2
+}
+
+console.log(add(2,4))
+
+function sumArrays(numbers: number[]): number{
+    let sum = 0;
+    for(let i of numbers){
+        sum += i;
+    }
+    return sum;
+}
+
+const numbers = [1, 4, 6, 4, 7];
+console.log(sumArrays(numbers))
+
+
+class man {
+    isTall: boolean;
+    doesWell: boolean;
+    fine: boolean;
+    hasACar: boolean;
+    hasAHouse: boolean;
+    payMyBills: boolean;
+    fit_SixPacks: boolean;
+    isEducated: boolean;
+    isSmart: boolean;
+    isKind: boolean;
+    isEmployed: boolean;
+    doesNotSmome: boolean;
+    doesNotWomanise: boolean;
+    doesNotDrink: boolean;
+    isRomantic: boolean;
+}
+
+let Peter = new man();
+Peter.doesNotDrink = true;
+Peter.doesNotSmome = true;
+Peter.doesNotWomanise = true;
+Peter.doesWell = true;
+Peter.fine = false;
+Peter.fit_SixPacks = false;
+Peter.hasACar = false;
+Peter.hasAHouse = false;
+Peter.isEducated = true;
+Peter.isEmployed = false;
+Peter.isKind = true;
+Peter.isRomantic = true;
+Peter.isSmart = true;
+Peter.isTall = true;
+Peter.payMyBills = false;
+
+console.log(Peter)
+
+let cot: number
+
+cot = 0
+
+for (let i = 0; i < 10; i++){
+    cot ++;
+    console.log(cot)
+}
+
+let you: string
+let age: number
+let pet: string
+
+function greetWell(){
+    console.log(`Hi ${you} you seem to be ${age}. Where did you get this lovely ${pet}.`)
+}
+
+you = "Peter";
+age = 23;
+pet = "Dog"
+
+console.log(greetWell())
+ */
+
+/* function change(decimal: number): void {
+    let binary: number[];
+
+    binary = [];
+    while (decimal !== 0) {
+        let remainder: number = decimal % 2;
+        decimal = Math.floor(decimal / 2);
+        binary.push(remainder);
+    }
+
+    // If no remainders were pushed (decimal was 0)
+    if (binary.length === 0) {
+        binary.push(0);
+    }
+
+    // Reverse the binary array to get the correct order
+    binary.reverse();
+
+    console.log(binary.join(''));
+}
+
+// Test the function
+/* let decimal = 20; */
+// console.log(`Binary representation of ${decimal}: ${change(decimal)}`);
+
+
+
+/* class HatchDevClass{
+    private pupils: string[] = []
+
+    constructor(student: string[]){
+        this.pupils = student;
+    }
+
+    getStudentNames(){
+        return this.pupils
+    }
+
+    private getTotalNumberOfStudents(){
+        return this.pupils.length
+    }
+}
+
+const excelSheet = ["ade", "tola", "mide"]
+const HC = new HatchDevClass(excelSheet);
+
+console.log(HC['getTotalNumberOfStudents']());
+
+
+
+
+const chl = ["arsenal", "bayern", "real", "manCity"]
+const disClubs: string[] = [] */
+
+// DECLARATIVE
+/* chl.filter((club: string) => {
+    if (club == "arsenal" || club == "manCity"){
+        disClubs.push(club)
+    }
+}) */
+
+
+// IMPERATIVE
+/* for(let i = 0; i < chl.length; i++){
+    const club = chl[i];
+    if (club == "arsenal" || club == "manCity"){
+        disClubs.push(club)
+    }
+}
+console.log(disClubs) */
+
+
+
+
+
+
+
+class Laptop{
+    keyboard: Keyboard[] = []
+    nic: NetworkInterfaceCard
+    screen: Display
+    hardDisk: HardDisk
+    powerState: boolean = false;
+    bitKind: BitKind
+    ops: OperatingSystem
+
+    constructor(
+        bit: BitKind,
+        display: Display,
+        nic: NetworkInterfaceCard,
+        hd: HardDisk,
+        os: Oskind,
+        keyBoards: Keyboard[]
+    ) {
+        this.powerState = false
+    }
+
+    switchOn(){
+        this.powerState = true;
+    }
+
+    switchOff(){
+        this.powerState = false;
+    }
+
+    update(){
+
+    }
+}
+
+type Oskind = "Linux" | "Mac" | "Windows"
+type BitKind = "x64" | "x32" | "x68"
+
+
+class OperatingSystem{
+    kind: Oskind
+    version : string
+
+    set operatingSystem(type: Oskind){
+        this.kind = type;
+    }
+
+    set systemVersion(val: string){
+        this.version = val;
+    }
+}
+
+class HardDisk{
+    type: "ssd" | "hdd"
+}
+
+class Display{
+    size: number
+    type: DisplayType
+
+    set diaplaySize(val: number){
+        this.size = val;
+    }
+
+    set diaplayType(type: DisplayType){
+        this.type = type;
+    }
+}
+
+type DisplayType = "amoled" | "lcd" |"oled"
+
+class NetworkInterfaceCard{
+   constructor(public readonly name:string){
+
+   }
+}
+
+class Keyboard{
+    kind: KeyboardKind
+    layout: KeyboardLayout
+
+    set myKeyboard(kind: KeyboardKind){
+        this.kind = kind
+    }
+
+    set myLayout(design: KeyboardLayout){
+        this.layout = design;
+    }
+
+}
+
+type KeyboardKind = "in-built"  | "external"
+type KeyboardLayout = "QUERTY"  | "QUERTZ" |  "AZERTY"
+
+
+const display = new Display()
+display.diaplaySize = 16
+display.diaplayType = "amoled"
+
+const nic = new NetworkInterfaceCard("Js")
+
+const os = new OperatingSystem()
+os.operatingSystem = "Windows"
+os.systemVersion = "22H2"
+
+const hd = new HardDisk()
+hd.type = "ssd"
+
+const keyboards = new Keyboard()
+keyboards.myKeyboard = "in-built"
+keyboards[0].myLayout = "QUERTY"
+
+
+const nitLap = new Laptop("x64", display, nic,hd, os,keyboards )
+
+
+

@@ -1,0 +1,70 @@
+1. Explain why a return key is still returning a value after setting the interface to void
+2. Advantages of composition over aggregation
+3. Check ISO Model
+4. Check DNS
+
+// ANSWER //
+Return Key Returning a Value After Setting the Interface to Void:
+    In TypeScript, the void type indicates that a function does not return a value. However, it does not prevent a function from executing a return; statement without a value. If a return; statement is present in a function with a void return type, TypeScript allows it because the function is not explicitly returning a value.
+    typescript
+    Copy code
+    function exampleFunction(): void {
+        return; // This is allowed
+    }
+
+2. Advantages of Composition Over Aggregation:
+    1. Flexibility: Composition allows objects to be more flexible as components can be added, removed, or replaced at runtime, providing dynamic behavior.
+    2. Encapsulation: Composition enforces encapsulation as each component can have its own behavior and state, ensuring that changes to one component don't affect others.
+    3. Loose Coupling: Composition promotes loose coupling between objects, making the system easier to maintain and modify without impacting other components.
+    4. Reuse: Composition supports code reuse by allowing components to be shared across different objects, promoting modular and reusable design.
+
+
+ISO Model (ISO/OSI Model):
+    The ISO/OSI (Open Systems Interconnection) model is a conceptual framework used to understand network interactions. It consists of seven layers, each responsible for specific functions:
+        1. Physical Layer: Deals with physical connections and signaling.
+        2. Data Link Layer: Manages data frames and provides error detection and correction.
+        3. Network Layer: Handles routing and forwarding of data packets.
+        4. Transport Layer: Ensures reliable data transfer between devices and manages flow control and error recovery.
+        5. Session Layer: Establishes, maintains, and terminates sessions between applications.
+        6. Presentation Layer: Translates data between the application layer and the network, handling data encryption and decryption.
+        7. Application Layer: Provides network services to applications and end-users.
+
+DNS (Domain Name System):
+    DNS is a hierarchical and decentralized naming system for computers, services, or any resource connected to the Internet. It translates human-friendly domain names (like www.example.com) into IP addresses (like 192.0.2.1) that computers use to identify each other on the network.
+    Functions of DNS:
+        1. Domain Name Resolution: Converts domain names to IP addresses.
+        2. Domain Name Distribution: Distributes domain name space across various DNS servers.
+        3. Hostname to IP Address Mapping: Resolves hostnames to their corresponding IP addresses.
+        4. Mail Exchange Records (MX Records): Directs email to the correct mail servers.
+        5. Alias Records (CNAME Records): Maps one domain name to another.
+    Components of DNS:
+        1. DNS Resolver: Locates the IP address associated with a domain name.
+        2. DNS Root Servers: The starting point for DNS queries, providing information about Top-Level Domains (TLDs).
+        3. DNS Top-Level Domain (TLD) Servers: Provide information about second-level domains within a TLD.
+        4. Authoritative DNS Servers: Hold the actual DNS records (like A, MX, CNAME records) for specific domains.
+
+
+
+Abstract classes are Definition fromo classes
+
+
+flipping an image
+merge sort
+selection
+inseertion
+bubble supports
+
+Two poibters algorithm
+Hackerrank
+
+
+# a stack from a linkedlist
+# a linkedlist from a stack
+# a stack from a queue
+# a queue from a stack
+# week 5 assignment
+
+
+
+
+
