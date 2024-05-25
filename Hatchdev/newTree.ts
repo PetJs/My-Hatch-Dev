@@ -41,6 +41,7 @@ class BinaryTree<T>{
             if(parentNode!.right){
                 q.push(parentNode!.right);
             }
+            return transversalArr;
         }
     }
 }
