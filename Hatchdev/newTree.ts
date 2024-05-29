@@ -70,36 +70,30 @@ class BinaryTree<T>{
         }
     }
 
-    preOrderTransversal(){
-        if(!this.root){
-            return;
+    // DFS TransversAL
+    preOrderTraversal(): T[] {
+        if (!this.root) {
+            return [];
         }
 
-        let q: Nodel<T>[] = [];
-        q.push(this.root);
-        while(q.length > 0){
-            let temp = q.shift()!;
-            let preOrderTrans:Nodel<T>[] = [];
+        let result: T[] = [];
+        let stack: Nodel<T>[] = [this.root];
 
-            preOrderTrans.push(temp);
-            console.log(temp.val);
+        while (stack.length > 0) {
+            let current = stack.pop()!;
+            result.push(current.val);
+            console.log(current.val);
 
-            if(temp.left!){
-                q.push(temp.left!)
-                let next = q.shift()!
-                while(next.left){
-                    q.push(next.left!);
-                }
+            // Push right child first so that left is processed first
+            if (current.right) {
+                stack.push(current.right);
             }
-            if(temp.right!){
-                q.push(temp.right!)
-                let next = q.shift()!
-                while(next.left){
-                    q.push(next.left!);
-                }
+            if (current.left) {
+                stack.push(current.left);
             }
-            return preOrderTrans;
         }
+
+        return result;
     }
 
     // David mark preOrder Transversal
