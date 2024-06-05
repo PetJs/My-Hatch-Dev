@@ -37,4 +37,46 @@ class BinarySearchTree{
             this.insertNode(newNode, this.root)
         }
     }
+
+    // Deleting from a bst
+    findMinNode(node: shabala): shabala{
+        if(node.left === null){
+            return node;
+        }
+        return this.findMinNode(node.left);
+    }
+
+    delete(val: number) {
+        this.root = this.deleteNode(val, this.root!);
+    }
+
+    private deleteNode(val: number, node){
+        if(node === null){
+            return null;
+        }
+
+        if(val < node.val){
+            node.left = this.deleteNode(val, node.left!);
+            return node;
+        }else if(val > node.val){
+            node.right = this.deleteNode(val, node.right!);
+            return node;
+        } else{
+            if (node.left === null && node.right === null){
+                node = null;
+                return node;
+            }else if(node.left === null){
+                node = node.right;
+                return node;
+            } else if(node.right === null){
+                node = node.left;
+                return node;
+            }
+            const minNode = this.findMinNode(node.right);
+            node.val = minNode.val;
+
+            node.right = this.deleteNode(minNode.val, node.right);
+            return node;
+        }  // LEET CODE 450
+    }
 }
