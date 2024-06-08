@@ -10,7 +10,7 @@ function selectionSort(array: number[]){
             const current = array[idxMin];
             array[idxMin] = array[i];
             array[i] = current;
-        }
+        } 
     }return array;
 }
 
