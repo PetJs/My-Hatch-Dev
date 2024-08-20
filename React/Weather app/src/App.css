@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+    font-size: 2em;
+}
+
+h1{
+    font-size: 3em;
+    color: #fff;
+}
+
+h2{
+    font-size: 1.5em;
+    color: #fff;
+}
+
+input{
+    margin-right: 20px;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+button{
+    border-radius: 10px;
+    font-size: 1.2em;
+    background-color: #fff;
+    color: #1b263b;
+}
+
+.card{
+    margin: 30px;
+    padding: 2em;
+    border-radius: 20px;
+}
+
+.card-sec{
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    transition: background-color 0.5s ease;
+}
+
+.location{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+.weather-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px; /* Space between icon and details */
+}
+  
+.weather-icon-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+  
+.weather-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between rows and columns */
+}
+
+  
+  
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid ;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #1b263b;
+}
+  
+.label {
+    text-align: left;
+    font-weight: bold;
+}
+  
+.value {
+    text-align: right;
+}
+
+body{
+    background-color: #1b263b;
+    color: #fff;
+}

@@ -1,5 +1,5 @@
-const mergeSort = (array: number[]) =>{
-    if (array.length <= 1){return array};
-    
+function mergeSort(array: number[]): number[] | undefined {
+    if (array.length <= 1) { return array; };
+
     let mid = Math.floor(array.length / 2);
 }
