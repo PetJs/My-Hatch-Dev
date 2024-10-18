@@ -1,0 +1,6 @@
+.sidebar-component{
+    height: '100vh';
+    padding: 0;
+    margin: 0;
+    position:  'fixed';  
+}
